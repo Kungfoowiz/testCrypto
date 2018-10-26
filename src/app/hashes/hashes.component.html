@@ -1,0 +1,32 @@
+<!-- <h3>{{myHash.hashName | uppercase}} Detail</h3> -->
+
+<div>
+
+    <h2>My Hashes</h2>
+    <!-- <ul class="hashes">
+        <li *ngFor="let hash of hashes" (click)="onSelect(hash)" [class.selected]="hash === selectedHash">
+            <span class="badge">{{hash.id}}</span> {{hash.hashName}}
+        </li>
+    </ul> -->
+
+    <ul class="hashes">
+        <li *ngFor="let hash of hashes">
+            <a routerLink="/detail/{{hash.id}}">
+                <span class="badge">{{hash.id}}</span> {{hash.hashName}}
+            </a>
+            <button class="delete" title="Delete Hash" (click)="delete(hash)">X</button>
+        </li>
+    </ul>
+
+    <!-- <app-hash-detail [hash]="selectedHash"></app-hash-detail> -->
+
+
+    <div>
+        <label>Hash Name:
+          <input #hashName />
+        </label>
+        <!-- (click) passes input value to add() and then clears the input -->
+        <button (click)="add(hashName.value); hashName.value=''">Add Hash</button>
+      </div>
+
+</div>

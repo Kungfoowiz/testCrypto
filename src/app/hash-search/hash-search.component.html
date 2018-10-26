@@ -1,0 +1,14 @@
+<div id="search-component">
+  <h4>Hash Search</h4>
+ 
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+ 
+  <ul class="search-result">
+    <li *ngFor="let hash of hashes$ | async" >
+      <a routerLink="/detail/{{hash.id}}">
+        {{hash.hashName}}
+      </a>
+    </li>
+  </ul>
+
+</div>

@@ -1,0 +1,20 @@
+<div *ngIf="hash">
+
+    <h3>{{hash.hashName | uppercase}} Details</h3>
+
+    <div>
+        <label>hashName: <input [(ngModel)]="hash.hashName" placeholder="hashName"></label>
+    </div>
+
+    <div>
+        <label>id: <span>{{hash.id}}</span></label>
+    </div>
+
+    <div>
+        <label>hashText: <span>{{hash.hashText}}</span></label>
+    </div>
+
+    <button (click)="save()">Save Changes</button>
+
+    <button (click)="goBack()">Go Back</button>
+</div>

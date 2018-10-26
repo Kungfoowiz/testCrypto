@@ -1,0 +1,13 @@
+<h3>Top Hashes</h3>
+
+<div class="grid grid-pad">
+  <a *ngFor="let hash of hashes" class="col-1-4"  routerLink="/detail/{{hash.id}}">
+    <div class="module hash">
+      <h4>{{hash.hashName}}</h4>
+    </div>
+  </a>
+</div>
+
+<div>Result = [{{result}}]</div>
+
+<app-hash-search></app-hash-search>
